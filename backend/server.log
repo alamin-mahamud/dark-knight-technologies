@@ -1,0 +1,108 @@
+INFO:     Will watch for changes in these directories: ['/Users/alamin/work/amir-parvin-group/dark-knight/dark-knight-technologies/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [93403] using StatReload
+INFO:     Started server process [93414]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:56417 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56607 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56723 - "GET /api/v1/contact/test HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56728 - "GET /api/v1/roi/calculate HTTP/1.1" 422 Unprocessable Content
+WARNING:  StatReload detected changes in 'app/api/v1/endpoints/contact.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [93414]
+INFO:     Started server process [94822]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/api/v1/endpoints/contact.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [94822]
+INFO:     Started server process [95023]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:58026 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58248 - "POST /api/v1/contact/step1 HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'app/api/v1/endpoints/roi.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [95023]
+INFO:     Started server process [96041]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/api/v1/endpoints/roi.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [96041]
+INFO:     Started server process [96343]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:59317 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59319 - "POST /api/v1/contact/step1 HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'app/api/v1/endpoints/roi.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [96343]
+INFO:     Started server process [96519]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/api/v1/endpoints/roi.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [96519]
+INFO:     Started server process [96576]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:59758 - "POST /api/v1/roi/quick-calculate HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:59880 - "POST /api/v1/roi/quick-calculate HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'app/core/database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [96576]
+INFO:     Started server process [97251]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/core/database.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [97251]
+INFO:     Started server process [97388]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [97388]
+INFO:     Started server process [97480]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [97480]
+INFO:     Started server process [97547]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:60969 - "GET /health/database HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61070 - "GET /health/detailed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61529 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61630 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61630 - "GET /api/v1/openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61762 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64481 - "HEAD /health HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:64595 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64616 - "POST /api/v1/contact/ HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:64818 - "POST /api/v1/roi/calculate/ HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:52548 - "GET /health/detailed HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58184 - "GET /health/detailed HTTP/1.1" 200 OK
