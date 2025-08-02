@@ -1,0 +1,55 @@
+name: Health Check & Monitoring
+
+on:
+  schedule:
+    # Run health checks every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    name: Application Health Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check application health
+      run: |
+        # Add your health check endpoints here
+        ENDPOINTS=(
+          "${{ vars.STAGING_URL || 'https://staging.dark-knight-tech.com' }}/api/health"
+          "${{ vars.PRODUCTION_URL || 'https://dark-knight-tech.com' }}/api/health"
+        )
+        
+        for endpoint in "${ENDPOINTS[@]}"; do
+          echo "Checking: $endpoint"
+          if curl -f -s --max-time 10 "$endpoint" > /dev/null; then
+            echo "✅ $endpoint is healthy"
+          else
+            echo "❌ $endpoint is down"
+            exit 1
+          fi
+        done
+        
+    - name: Notify on failure
+      if: failure()
+      uses: 8398a7/action-slack@v3
+      with:
+        status: failure
+        channel: '#alerts'
+        webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+        text: '🚨 Health check failed for Dark Knight Technologies frontend'
+
+  performance-check:
+    name: Performance Monitoring
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Lighthouse CI
+      uses: treosh/lighthouse-ci-action@v10
+      with:
+        urls: |
+          ${{ vars.PRODUCTION_URL || 'https://dark-knight-tech.com' }}
+          ${{ vars.PRODUCTION_URL || 'https://dark-knight-tech.com' }}/services
+          ${{ vars.PRODUCTION_URL || 'https://dark-knight-tech.com' }}/about
+        uploadArtifacts: true
+        temporaryPublicStorage: true

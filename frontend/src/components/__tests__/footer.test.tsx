@@ -22,7 +22,7 @@ describe('Footer', () => {
     render(<Footer />)
     
     expect(screen.getByText('Company')).toBeInTheDocument()
-    expect(screen.getByText('Services')).toBeInTheDocument()
+    expect(screen.getAllByText('Services')).toHaveLength(2) // One link, one section heading
     expect(screen.getByText('Case Studies')).toBeInTheDocument()
     expect(screen.getByText('About')).toBeInTheDocument()
     expect(screen.getByText('Contact')).toBeInTheDocument()
